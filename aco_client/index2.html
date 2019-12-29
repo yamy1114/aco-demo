@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<!--Import Google Icon Font-->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body class="grey lighten-2">
+<!-- ヘッダー -->
+<div class="blue darken-2 white-text center z-depth-1" style="padding:1px; margin:5px">
+	<h4><b>ACO SIMULATER</b></h4>
+</div>
+<div class="row" style="margin:5px">
+	<!-- グラフエリア -->
+	<div class="col l4">
+		<div class="white z-depth-1" style="padding:20px; padding-bottom:0px; margin-left:-10px; margin-right:-10px; margin-bottom:-20px">
+			<canvas id="canvas-area" width="1000" height="1000" style="width:100%" class="grey lighten-4"></canvas>
+			<br><br>
+			<div class="row valign-wrapper">
+				<div class="col l4">
+					ノード数：
+					<input type="number" id="form-N" value=10>
+				</div>
+				<div class="col l4">
+					隣接ノード数：
+					<input type="number" id="form-k" value=4>
+				</div>
+				<div class="col l4 center">
+					<div class="btn blue darken-2 waves-effect waves-light" id="btn-generate-graph"><b>生成</b></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- チャートエリア -->
+	<div class="col l4">
+		<div class="white z-depth-1 center" style="padding:20px; margin-left:-5px; margin-right:-5px; margin-bottom:-20px">
+			<canvas id="chart-area" width="500" height="300" style="width:100%"></canvas>
+			<br><br>
+			<h5>最短経路長：<span id="shortest-path">∞</span></h5>
+		</div>
+	</div>
+	<!-- パラメータ設定エリア -->
+	<div class="col l4">
+		<div class="white z-depth-1" style="padding:30px; margin-left:-10px; margin-right:-10px; margin-bottom:-20px">
+			<div class="row">
+				<div class="col l6">
+					パラメータ α：
+					<input type="number" id="form-alpha" value=1>
+				</div>
+				<div class="col l6">
+					パラメータ β：		
+					<input type="number" id="form-beta" value=1>
+				</div>
+				<div class="col l6">
+					パラメータ p：		
+					<input type="number" id="form-p" value=0.1>
+				</div>
+				<div class="col l6">
+					パラメータ q：		
+					<input type="number" id="form-q" value=10>
+				</div>
+				<div class="col offset-l3 l6">
+					アリの数：
+					<input type="number" id="form-ant-n" value=30>
+				</div>
+			</div>
+			<div class="center">
+				<div class="btn blue darken-2 waves-effect waves-light" id="btn-control"><b>start</b></div>　
+				<div class="btn blue darken-2 waves-effect waves-light" id="btn-reset"><b>reset</b></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- フッター -->
+<div class="blue-grey darken-3 white-text center z-depth-1" style="padding:10px; margin:5px">
+	copyright (c) 2016 Wakamiya Laboratory
+</div>
+
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="bower_components/socket.io-client/socket.io.js"></script>
+<script src="bower_components/smoothie/smoothie.js"></script>
+<script src="js/client.js"></script>
+</body>
+</html>

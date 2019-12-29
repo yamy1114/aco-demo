@@ -1,0 +1,23 @@
+{
+  "name": "aco_client",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "k-yamank <k-yamank@ist.osaka-u.ac.jp>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "socket.io-client": "^1.5.0",
+    "jquery": "^3.1.1",
+    "materialize": "^0.97.7",
+    "smoothie": "^1.27.0"
+  }
+}
